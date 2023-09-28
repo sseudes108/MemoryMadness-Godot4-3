@@ -11,8 +11,14 @@ config_version=5
 [application]
 
 config/name="MemoryMadness"
+run/main_scene="res://Project/Master/Master.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
-config/icon="res://icon.svg"
+config/icon="res://icon.png"
+
+[display]
+
+window/size/viewport_width=1024
+window/size/viewport_height=600
 
 [rendering]
 

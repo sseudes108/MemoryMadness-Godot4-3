@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://5g8ohqepq83k"]
+
+[ext_resource type="Texture2D" uid="uid://df0pijerla51l" path="res://assets/images/backgroundEmpty.png" id="1_dhnxk"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -204.0
+offset_right = 1.0
+offset_bottom = 220.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_dhnxk")
