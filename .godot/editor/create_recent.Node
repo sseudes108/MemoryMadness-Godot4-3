@@ -1,2 +1,9 @@
+Control
+TouchScreenButton
+HBoxContainer
+Label
+VBoxContainer
+MarginContainer
+ColorRect
 TextureRect
 CanvasLayer

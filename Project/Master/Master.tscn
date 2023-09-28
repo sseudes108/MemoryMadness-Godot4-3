@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://5g8ohqepq83k"]
+[gd_scene load_steps=3 format=3 uid="uid://5g8ohqepq83k"]
 
 [ext_resource type="Texture2D" uid="uid://df0pijerla51l" path="res://assets/images/backgroundEmpty.png" id="1_dhnxk"]
+[ext_resource type="PackedScene" uid="uid://cdahjvwiv8fmu" path="res://Project/Main/Main.tscn" id="2_0xcxk"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 
@@ -15,3 +16,5 @@ offset_bottom = 220.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_dhnxk")
+
+[node name="MainScene" parent="." instance=ExtResource("2_0xcxk")]
