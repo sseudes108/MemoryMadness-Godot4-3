@@ -2,3 +2,10 @@ res://Project/Master/Master.tscn
 res://Project/Singletons/ImageManager.gd
 res://Project/Main/Main.tscn
 res://Project/Main/Main81.tres
+res://Project/FrontSprite/FrontSprite.tscn
+res://Project/FrontSprite/FrontSprite.gd
+res://Project/LevelButton/LevelButton.tscn
+res://Project/LevelButton/LevelButton.gd
+res://Project/Singletons/GameManager.gd
+res://Project/Singletons/SoundManager.gd
+res://Project/Main/MainScene.gd

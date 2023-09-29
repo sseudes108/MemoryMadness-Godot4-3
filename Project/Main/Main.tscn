@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://cdahjvwiv8fmu"]
+[gd_scene load_steps=5 format=3 uid="uid://cdahjvwiv8fmu"]
 
 [ext_resource type="LabelSettings" uid="uid://cj5kqd3whockj" path="res://Project/Main/Main81.tres" id="1_l4lec"]
+[ext_resource type="Script" path="res://Project/Main/MainScene.gd" id="1_sjxsb"]
+[ext_resource type="PackedScene" uid="uid://dltd58koeacof" path="res://Project/FrontSprite/FrontSprite.tscn" id="2_0yh52"]
+[ext_resource type="PackedScene" uid="uid://cpnxq4f6vqjr6" path="res://Project/LevelButton/LevelButton.tscn" id="2_dixwq"]
 
 [node name="MainScene" type="Control"]
 layout_mode = 3
@@ -9,6 +12,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_sjxsb")
+levelButton = ExtResource("2_dixwq")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -42,7 +47,7 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Levels" type="HBoxContainer" parent="VBoxContainer"]
+[node name="LevelGrid" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 
@@ -53,6 +58,19 @@ size_flags_vertical = 3
 [node name="Icons" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_constants/separation = 72
+
+[node name="Sprite" parent="VBoxContainer/Icons" instance=ExtResource("2_0yh52")]
+layout_mode = 2
+
+[node name="Sprite2" parent="VBoxContainer/Icons" instance=ExtResource("2_0yh52")]
+layout_mode = 2
+
+[node name="Sprite3" parent="VBoxContainer/Icons" instance=ExtResource("2_0yh52")]
+layout_mode = 2
+
+[node name="Sprite4" parent="VBoxContainer/Icons" instance=ExtResource("2_0yh52")]
+layout_mode = 2
 
 [node name="Spacer" type="Control" parent="VBoxContainer"]
 layout_mode = 2

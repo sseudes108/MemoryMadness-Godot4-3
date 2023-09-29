@@ -9,8 +9,8 @@ func AddToList(file: String, path: String) -> void:
 	var fullPath = path + "/" + file
 	
 	var imageDict = {
-		"Item Name": file.rstrip(".png"),
-		"Item Texture: ": load(fullPath)
+		"ItemName": file.rstrip(".png"),
+		"ItemTexture": load(fullPath)
 	}
 	itemImagem.append(imageDict)
 
@@ -28,3 +28,5 @@ func LoadImages() -> void:
 		if ".import" not in file:
 			AddToList(file,path)
 
+func SetRandomImage() -> Dictionary:
+	return itemImagem.pick_random()
