@@ -1,0 +1,101 @@
+[gd_scene load_steps=7 format=3 uid="uid://c6rragbgeqx1t"]
+
+[ext_resource type="Script" path="res://Project/GameScreen/GameScreen.gd" id="1_0ipdw"]
+[ext_resource type="LabelSettings" uid="uid://c8rr3nm88w5aq" path="res://Project/GameScreen/GameScreen27.tres" id="1_vhhqf"]
+[ext_resource type="Texture2D" uid="uid://dum7lyg8p5g3h" path="res://assets/ui/blue_button00.png" id="2_trs0i"]
+[ext_resource type="Texture2D" uid="uid://blakjeym84pem" path="res://assets/ui/green_button00.png" id="3_hvlnc"]
+[ext_resource type="Texture2D" uid="uid://dfquowba2hrr2" path="res://assets/ui/yellow_button00.png" id="3_shs8o"]
+[ext_resource type="LabelSettings" uid="uid://c07t5bfetnvdh" path="res://Project/GameScreen/GameScreen27-White.tres" id="5_j1lda"]
+
+[node name="GameScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0ipdw")
+
+[node name="BoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridMargin" type="MarginContainer" parent="BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GridContainer" type="GridContainer" parent="BoxContainer/GridMargin"]
+layout_mode = 2
+
+[node name="LabelsMargin" type="MarginContainer" parent="BoxContainer"]
+custom_minimum_size = Vector2(216, 0)
+layout_mode = 2
+theme_override_constants/margin_right = 18
+
+[node name="TextContainer" type="VBoxContainer" parent="BoxContainer/LabelsMargin"]
+layout_mode = 2
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.0
+theme_override_constants/separation = 9
+
+[node name="MoveContainer" type="HBoxContainer" parent="BoxContainer/LabelsMargin/TextContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MoveLabel" type="Label" parent="BoxContainer/LabelsMargin/TextContainer/MoveContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Moves"
+label_settings = ExtResource("1_vhhqf")
+
+[node name="MoveCount" type="Label" parent="BoxContainer/LabelsMargin/TextContainer/MoveContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "000"
+label_settings = ExtResource("1_vhhqf")
+
+[node name="PairContainer" type="HBoxContainer" parent="BoxContainer/LabelsMargin/TextContainer"]
+layout_mode = 2
+
+[node name="PairLabel" type="Label" parent="BoxContainer/LabelsMargin/TextContainer/PairContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Pairs"
+label_settings = ExtResource("1_vhhqf")
+
+[node name="PairCount" type="Label" parent="BoxContainer/LabelsMargin/TextContainer/PairContainer"]
+layout_mode = 2
+text = "0 / 00"
+label_settings = ExtResource("1_vhhqf")
+
+[node name="Spacer" type="Control" parent="BoxContainer/LabelsMargin/TextContainer"]
+custom_minimum_size = Vector2(0, 27)
+layout_mode = 2
+
+[node name="ExitButton" type="TextureButton" parent="BoxContainer/LabelsMargin/TextContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_trs0i")
+texture_pressed = ExtResource("3_shs8o")
+texture_hover = ExtResource("3_hvlnc")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="BoxContainer/LabelsMargin/TextContainer/ExitButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Exit
+"
+label_settings = ExtResource("5_j1lda")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sound" type="AudioStreamPlayer" parent="."]
+
+[connection signal="pressed" from="BoxContainer/LabelsMargin/TextContainer/ExitButton" to="." method="ExitButtonPressed"]

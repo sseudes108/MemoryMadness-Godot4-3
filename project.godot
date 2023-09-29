@@ -17,6 +17,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
+SignalManager="*res://Project/Singletons/SignalManager.gd"
 ImageManager="*res://Project/Singletons/ImageManager.gd"
 SoundManager="*res://Project/Singletons/SoundManager.gd"
 GameManager="*res://Project/Singletons/GameManager.gd"

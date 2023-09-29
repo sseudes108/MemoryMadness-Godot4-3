@@ -1,11 +1,12 @@
-Label
 AudioStreamPlayer
-TextureButton
-TextureRect
 Control
-TouchScreenButton
+Label
+TextureButton
 HBoxContainer
 VBoxContainer
 MarginContainer
+GridContainer
+TextureRect
+TouchScreenButton
 ColorRect
 CanvasLayer

@@ -1,7 +1,7 @@
 extends TextureButton
 
 @onready var label = $Label
-@onready var audio = $Audio
+@onready var sound = $Sound
 
 var lvlNumber: float = 0
 
@@ -12,3 +12,7 @@ func SetLevelNumber(level: int) -> void:
 	lvlNumber = level
 	var lvlData = GameManager.LEVELS[level]
 	label.text = "%sx%s" % [lvlData.rows,lvlData.cols]
+
+func Pressed():
+	SoundManager.ClickSound(sound)
+	SignalManager.levelSelected.emit(lvlNumber)
