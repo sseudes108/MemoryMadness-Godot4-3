@@ -4,7 +4,6 @@ class_name Scorer
 @onready var sound = $Sound
 @onready var timer = $Timer
 
-#var tiles: Array = []
 var selections: Array = []
 var pairs: int = 0
 var movesMade: int = 0
@@ -19,13 +18,14 @@ func NewGame(targetPairs: int):
 	movesMade = 0
 	pairsMade = 0
 	pairs = targetPairs
-#	tiles = get_tree().get_nodes_in_group(GameManager.GROUP_TILE)
 
 #4.5
 func SucessPair():
 	for tile in selections:
 		tile.SucessPair()
+	
 	pairsMade += 1
+	
 	SoundManager.PlaySound(sound, SoundManager.SOUND_SUCCESS)
 
 #4
@@ -69,6 +69,10 @@ func OnTimeout():
 	if SelectionsPaired() == false:
 		HideSelections()
 	selections.clear()
+	
+	if pairsMade >= pairs:
+		SignalManager.gameOver.emit(movesMade)
+	
 	SignalManager.selectionEnabled.emit()
 
 func Exit():

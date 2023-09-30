@@ -1,0 +1,117 @@
+[gd_scene load_steps=11 format=3 uid="uid://kxhi0x1vhxg4"]
+
+[ext_resource type="Texture2D" uid="uid://c28drqv81y6r5" path="res://assets/ui/UIbg.png" id="1_rpxtl"]
+[ext_resource type="Script" path="res://Project/GameOver/GameOver.gd" id="1_wsjms"]
+[ext_resource type="FontFile" uid="uid://drr84kgyygags" path="res://assets/fonts/LuckiestGuy-Regular.ttf" id="2_qq4e4"]
+[ext_resource type="FontFile" uid="uid://wse2u7v33hpq" path="res://assets/fonts/gemunu-libre-v8-latin-700.ttf" id="3_yn6mn"]
+[ext_resource type="Texture2D" uid="uid://dum7lyg8p5g3h" path="res://assets/ui/blue_button00.png" id="4_cqe7o"]
+[ext_resource type="Texture2D" uid="uid://dfquowba2hrr2" path="res://assets/ui/yellow_button00.png" id="5_3naq6"]
+[ext_resource type="Texture2D" uid="uid://blakjeym84pem" path="res://assets/ui/green_button00.png" id="6_rdbj0"]
+[ext_resource type="LabelSettings" uid="uid://c07t5bfetnvdh" path="res://Project/GameScreen/GameScreen27-White.tres" id="7_y3i31"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3mrby"]
+font = ExtResource("2_qq4e4")
+font_size = 81
+font_color = Color(0.6, 0.992157, 0.898039, 1)
+outline_size = 6
+outline_color = Color(0.0313726, 0.207843, 0.172549, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_gpfw8"]
+font = ExtResource("3_yn6mn")
+font_size = 42
+font_color = Color(0.0156863, 0, 0.109804, 1)
+outline_size = 1
+outline_color = Color(1, 0.388235, 0.0588235, 1)
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wsjms")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -270.0
+offset_top = -210.0
+offset_right = 270.0
+offset_bottom = 210.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_rpxtl")
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="MarginContainer" type="MarginContainer" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 42
+theme_override_constants/margin_top = 33
+theme_override_constants/margin_right = 42
+theme_override_constants/margin_bottom = 33
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NinePatchRect/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 42
+
+[node name="Label" type="Label" parent="NinePatchRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "You Win!!!"
+label_settings = SubResource("LabelSettings_3mrby")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="NinePatchRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Moves" type="Label" parent="NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Moves Taken"
+label_settings = SubResource("LabelSettings_gpfw8")
+
+[node name="Moves Count" type="Label" parent="NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "0000"
+label_settings = SubResource("LabelSettings_gpfw8")
+
+[node name="Spacer" type="Control" parent="NinePatchRect/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 33)
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="NinePatchRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("4_cqe7o")
+texture_pressed = ExtResource("5_3naq6")
+texture_hover = ExtResource("6_rdbj0")
+
+[node name="Label" type="Label" parent="NinePatchRect/MarginContainer/VBoxContainer/TextureButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Exit"
+label_settings = ExtResource("7_y3i31")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sound" type="AudioStreamPlayer" parent="."]
+volume_db = -10.0
+
+[connection signal="pressed" from="NinePatchRect/MarginContainer/VBoxContainer/TextureButton" to="." method="ExitButtonPressed"]

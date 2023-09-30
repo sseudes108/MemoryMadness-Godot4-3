@@ -8,3 +8,10 @@ res://Project/GameScreen/GameScreen.gd
 res://Project/GameScreen/GameScreen.tscn
 res://Project/Scorer/Scorer.gd
 res://Project/Singletons/SignalManager.gd
+res://Project/GameOver/GameOver.tscn
+res://Project/Master/Master.tscn
+res://Project/Main/Main.tscn
+res://Project/GameOver/GameOver.gd
+res://Project/Singletons/SoundManager.gd
+res://Project/LevelButton/LevelButton.tscn
+res://Project/FrontSprite/FrontSprite.tscn

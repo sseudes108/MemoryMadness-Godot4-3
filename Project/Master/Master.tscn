@@ -26,3 +26,4 @@ visible = false
 [node name="GameScreen" parent="." instance=ExtResource("3_pufmh")]
 
 [node name="Sound" type="AudioStreamPlayer" parent="."]
+volume_db = -15.0

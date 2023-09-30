@@ -2,6 +2,7 @@ extends Control
 
 @export var memoryTile: PackedScene
 @onready var scorer: Scorer = $Scorer
+@onready var gameOver = $GameOver
 
 @onready var sound = $Sound
 @onready var gridContainer = $BoxContainer/GridMargin/GridContainer

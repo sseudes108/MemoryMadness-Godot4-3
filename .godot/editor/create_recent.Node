@@ -1,13 +1,14 @@
 Timer
 AudioStreamPlayer
-Node
-TextureRect
-TextureButton
 Control
 Label
+TextureButton
 HBoxContainer
 VBoxContainer
 MarginContainer
+NinePatchRect
+Node
+TextureRect
 GridContainer
 TouchScreenButton
 ColorRect
