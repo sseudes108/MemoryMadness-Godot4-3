@@ -23,6 +23,17 @@ func SetUp(imageDict: Dictionary, frameImage: CompressedTexture2D):
 	image.texture = imageDict.ItemTexture
 	itemName = imageDict.ItemName
 
+func SucessPair():
+	z_index = 1
+	var tween = get_tree().create_tween()
+	tween.set_parallel(true)
+	tween.tween_property(self,"disable", true,0)
+	tween.tween_property(self,"rotation", deg_to_rad(720), 0.5)
+	tween.tween_property(self,"scale", Vector2(1.5,1.5), 0.5)
+	tween.set_parallel(false)
+	tween.set_parallel(0.5)
+	tween.tween_property(self,"scale", Vector2(0,0), 0)
+
 func SelectionEnabled():
 	canSelect = true
 

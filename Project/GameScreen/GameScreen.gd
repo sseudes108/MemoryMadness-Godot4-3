@@ -1,6 +1,7 @@
 extends Control
 
 @export var memoryTile: PackedScene
+@onready var scorer = $Scorer
 
 @onready var sound = $Sound
 @onready var gridContainer = $BoxContainer/GridMargin/GridContainer
@@ -25,6 +26,7 @@ func LevelSelected(level: int):
 	
 	for imageDict in levelSelection.List:
 		AddMemoryTile(imageDict, frameImage)
+	scorer.NewGame(levelSelection.Pairs)
 
 func ExitButtonPressed():
 	SoundManager.ClickSound(sound)

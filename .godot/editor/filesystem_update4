@@ -1,10 +1,7 @@
-res://Project/GameScreen/GameScreen.tscn
-res://Project/GameScreen/GameScreen27-White.tres
-res://Project/Singletons/SoundManager.gd
-res://Project/MemoryTile/MemoryTile.tscn
-res://Project/Singletons/GameManager.gd
-res://Project/Master/MasterScreen.gd
-res://Project/Singletons/SignalManager.gd
-res://Project/MemoryTile/MemoryTile.gd
 res://Project/Scorer/Scorer.tscn
+res://Project/GameScreen/GameScreen27-White.tres
+res://Project/GameScreen/GameScreen.tscn
 res://Project/Scorer/Scorer.gd
+res://Project/GameScreen/GameScreen.gd
+res://Project/MemoryTile/MemoryTile.tscn
+res://Project/MemoryTile/MemoryTile.gd
