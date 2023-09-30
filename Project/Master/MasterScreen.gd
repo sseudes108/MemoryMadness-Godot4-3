@@ -22,6 +22,6 @@ func ExitButtonPressed():
 	GameManager.ClearNodesOfGroup(GameManager.GROUP_TILE)
 	SoundManager.PlaySound(sound, SoundManager.SOUND_MAIN_MENU)
 
-func LevelSelected(level: int):
+func LevelSelected(_level: int):
 	PlayGame(true)
 	SoundManager.PlaySound(sound, SoundManager.SOUND_IN_GAME)

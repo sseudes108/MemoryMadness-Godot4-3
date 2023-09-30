@@ -1,4 +1,5 @@
 extends Node
+class_name Scorer
 
 @onready var sound = $Sound
 @onready var timer = $Timer
@@ -20,7 +21,6 @@ func NewGame(targetPairs: int):
 	pairs = targetPairs
 #	tiles = get_tree().get_nodes_in_group(GameManager.GROUP_TILE)
 
-
 #4.5
 func SucessPair():
 	for tile in selections:
@@ -30,7 +30,10 @@ func SucessPair():
 
 #4
 func SelectionsPaired() -> bool:
-	return selections[0].GetItemName() == selections[1].GetItemName()
+	if selections.size() == 2:
+		return selections[0].GetItemName() == selections[1].GetItemName()
+	else:
+		return false
 
 #3
 func UpdateSelections():
@@ -59,9 +62,12 @@ func HideSelections():
 		item.Reveal(false)
 
 func OnTimeout():
-	if selections.size() == 2:
-		if SelectionsPaired() == false:
-			HideSelections()
+	if selections.size() != 2:
+		HideSelections()
+		selections.clear()
+	
+	if SelectionsPaired() == false:
+		HideSelections()
 	selections.clear()
 	SignalManager.selectionEnabled.emit()
 
