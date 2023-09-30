@@ -1,5 +1,7 @@
 extends Node
 
+const GROUP_TILE: String = "Tile"
+
 const LEVELS: Dictionary = {
 	1: { "rows": 2, "cols": 2 },
 	2: { "rows": 3, "cols": 4 },
@@ -28,15 +30,8 @@ func GetLevelSelection(level: int) -> Dictionary:
 		"Cols": levelData.cols,
 		"List": selectedImages
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+func ClearNodesOfGroup(group: String):
+	for node in get_tree().get_nodes_in_group(group):
+		node.queue_free()
+

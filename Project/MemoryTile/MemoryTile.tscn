@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dhnu46tsk5nwt" path="res://assets/frames/green_frame.png" id="2_t7w41"]
 [ext_resource type="Texture2D" uid="uid://bed8svubam87k" path="res://assets/glitch/banana.png" id="3_pvv7e"]
 
-[node name="MemoryTile" type="TextureButton"]
+[node name="MemoryTile" type="TextureButton" groups=["Tile"]]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -22,6 +22,7 @@ texture_normal = ExtResource("1_54hna")
 script = ExtResource("2_2o3od")
 
 [node name="Frame" type="TextureRect" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -38,6 +39,7 @@ pivot_offset = Vector2(42, 42)
 texture = ExtResource("2_t7w41")
 
 [node name="Image" type="TextureRect" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -52,3 +54,5 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(32, 32)
 texture = ExtResource("3_pvv7e")
+
+[connection signal="pressed" from="." to="." method="Pressed"]

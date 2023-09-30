@@ -19,6 +19,7 @@ func PlayGame(play: bool):
 
 func ExitButtonPressed():
 	PlayGame(false)
+	GameManager.ClearNodesOfGroup(GameManager.GROUP_TILE)
 	SoundManager.PlaySound(sound, SoundManager.SOUND_MAIN_MENU)
 
 func LevelSelected(level: int):
