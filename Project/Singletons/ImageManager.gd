@@ -2,10 +2,17 @@ extends Node
 
 var itemImagem: Array = []
 
+const FRAMES: Array = [
+	preload("res://assets/frames/blue_frame.png"), 
+	preload("res://assets/frames/green_frame.png"), 
+	preload("res://assets/frames/red_frame.png"), 
+	preload("res://assets/frames/yellow_frame.png")
+]
+
 func _ready():
 	LoadImages()
 
-func AddToList(file: String, path: String) -> void:
+func AddToList(file: String, path: String):
 	var fullPath = path + "/" + file
 	
 	var imageDict = {
@@ -14,7 +21,7 @@ func AddToList(file: String, path: String) -> void:
 	}
 	itemImagem.append(imageDict)
 
-func LoadImages() -> void:
+func LoadImages():
 	var path = "res://assets/glitch"
 	var dir = DirAccess.open(path)
 	
@@ -30,3 +37,27 @@ func LoadImages() -> void:
 
 func SetRandomImage() -> Dictionary:
 	return itemImagem.pick_random()
+
+#Image Grid Logic
+func GetImage(index: int) -> Dictionary:
+	return itemImagem[index]
+
+func GetRandomFrame() -> CompressedTexture2D:
+	return FRAMES.pick_random()
+
+func ShuffleImages():
+	itemImagem.shuffle()
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

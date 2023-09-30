@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://c6rragbgeqx1t"]
+[gd_scene load_steps=8 format=3 uid="uid://c6rragbgeqx1t"]
 
 [ext_resource type="Script" path="res://Project/GameScreen/GameScreen.gd" id="1_0ipdw"]
 [ext_resource type="LabelSettings" uid="uid://c8rr3nm88w5aq" path="res://Project/GameScreen/GameScreen27.tres" id="1_vhhqf"]
+[ext_resource type="PackedScene" uid="uid://dedx5tmnjbr20" path="res://Project/MemoryTile/MemoryTile.tscn" id="2_dh5cc"]
 [ext_resource type="Texture2D" uid="uid://dum7lyg8p5g3h" path="res://assets/ui/blue_button00.png" id="2_trs0i"]
 [ext_resource type="Texture2D" uid="uid://blakjeym84pem" path="res://assets/ui/green_button00.png" id="3_hvlnc"]
 [ext_resource type="Texture2D" uid="uid://dfquowba2hrr2" path="res://assets/ui/yellow_button00.png" id="3_shs8o"]
@@ -15,6 +16,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_0ipdw")
+memoryTile = ExtResource("2_dh5cc")
 
 [node name="BoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
@@ -30,6 +32,8 @@ size_flags_horizontal = 3
 
 [node name="GridContainer" type="GridContainer" parent="BoxContainer/GridMargin"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
 [node name="LabelsMargin" type="MarginContainer" parent="BoxContainer"]
 custom_minimum_size = Vector2(216, 0)

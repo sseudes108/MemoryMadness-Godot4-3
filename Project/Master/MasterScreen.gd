@@ -10,8 +10,6 @@ func _ready():
 	SignalManager.levelSelected.connect(LevelSelected)
 
 func PlayGame(play: bool):
-#	mainScene.visible = play
-#	gameScreen.visible = !play
 	if play == true:
 		mainScene.hide()
 		gameScreen.show()
