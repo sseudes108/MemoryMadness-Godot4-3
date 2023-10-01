@@ -1,13 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://cpnxq4f6vqjr6"]
+[gd_scene load_steps=7 format=3 uid="uid://c3pvun01gnqr5"]
 
-[ext_resource type="Texture2D" uid="uid://chfxgtnfh2mrg" path="res://assets/ui/level_select_frame_128.png" id="1_6npfp"]
-[ext_resource type="Texture2D" uid="uid://bhehdft38k74b" path="res://assets/ui/level_select_frame_select_128.png" id="2_kvr7w"]
-[ext_resource type="Texture2D" uid="uid://c8jby7k4gnv2u" path="res://assets/ui/level_select_frame_hover_128.png" id="3_1ltjy"]
-[ext_resource type="Script" path="res://Project/LevelButton/LevelButton.gd" id="4_n3yue"]
-[ext_resource type="FontFile" uid="uid://wse2u7v33hpq" path="res://assets/fonts/gemunu-libre-v8-latin-700.ttf" id="5_o1m1p"]
+[ext_resource type="Texture2D" uid="uid://chfxgtnfh2mrg" path="res://assets/ui/level_select_frame_128.png" id="1_wy4jv"]
+[ext_resource type="Texture2D" uid="uid://bhehdft38k74b" path="res://assets/ui/level_select_frame_select_128.png" id="2_fh3ue"]
+[ext_resource type="Texture2D" uid="uid://c8jby7k4gnv2u" path="res://assets/ui/level_select_frame_hover_128.png" id="3_g6kfk"]
+[ext_resource type="Script" path="res://Project/LevelButton/LevelButton.gd" id="4_lh5ks"]
+[ext_resource type="FontFile" uid="uid://wse2u7v33hpq" path="res://assets/fonts/gemunu-libre-v8-latin-700.ttf" id="5_a0ujs"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xkfo8"]
-font = ExtResource("5_o1m1p")
+font = ExtResource("5_a0ujs")
 font_size = 33
 outline_size = 4
 outline_color = Color(0, 0, 0, 1)
@@ -26,10 +26,10 @@ offset_bottom = 64.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(64, 64)
-texture_normal = ExtResource("1_6npfp")
-texture_pressed = ExtResource("2_kvr7w")
-texture_hover = ExtResource("3_1ltjy")
-script = ExtResource("4_n3yue")
+texture_normal = ExtResource("1_wy4jv")
+texture_pressed = ExtResource("2_fh3ue")
+texture_hover = ExtResource("3_g6kfk")
+script = ExtResource("4_lh5ks")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1

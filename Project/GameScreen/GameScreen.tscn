@@ -1,14 +1,14 @@
 [gd_scene load_steps=10 format=3 uid="uid://c6rragbgeqx1t"]
 
-[ext_resource type="Script" path="res://Project/GameScreen/GameScreen.gd" id="1_0ipdw"]
-[ext_resource type="LabelSettings" uid="uid://c8rr3nm88w5aq" path="res://Project/GameScreen/GameScreen27.tres" id="1_vhhqf"]
-[ext_resource type="PackedScene" uid="uid://dedx5tmnjbr20" path="res://Project/MemoryTile/MemoryTile.tscn" id="2_dh5cc"]
-[ext_resource type="Texture2D" uid="uid://dum7lyg8p5g3h" path="res://assets/ui/blue_button00.png" id="2_trs0i"]
-[ext_resource type="Texture2D" uid="uid://blakjeym84pem" path="res://assets/ui/green_button00.png" id="3_hvlnc"]
-[ext_resource type="Texture2D" uid="uid://dfquowba2hrr2" path="res://assets/ui/yellow_button00.png" id="3_shs8o"]
-[ext_resource type="LabelSettings" uid="uid://c07t5bfetnvdh" path="res://Project/GameScreen/GameScreen27-White.tres" id="5_j1lda"]
-[ext_resource type="PackedScene" uid="uid://tacfmrukqlek" path="res://Project/Scorer/Scorer.tscn" id="8_bkm7j"]
-[ext_resource type="PackedScene" uid="uid://kxhi0x1vhxg4" path="res://Project/GameOver/GameOver.tscn" id="9_2sbw0"]
+[ext_resource type="Script" path="res://Project/GameScreen/GameScreen.gd" id="1_1a8wa"]
+[ext_resource type="PackedScene" uid="uid://dedx5tmnjbr20" path="res://Project/MemoryTile/MemoryTile.tscn" id="2_0eo41"]
+[ext_resource type="LabelSettings" uid="uid://c8rr3nm88w5aq" path="res://Project/GameScreen/GameScreen27.tres" id="3_fdpkd"]
+[ext_resource type="Texture2D" uid="uid://dum7lyg8p5g3h" path="res://assets/ui/blue_button00.png" id="4_vvxhh"]
+[ext_resource type="Texture2D" uid="uid://dfquowba2hrr2" path="res://assets/ui/yellow_button00.png" id="5_yum4k"]
+[ext_resource type="Texture2D" uid="uid://blakjeym84pem" path="res://assets/ui/green_button00.png" id="6_bhpl3"]
+[ext_resource type="LabelSettings" uid="uid://c07t5bfetnvdh" path="res://Project/GameScreen/GameScreen27-White.tres" id="7_w655d"]
+[ext_resource type="PackedScene" uid="uid://tacfmrukqlek" path="res://Project/Scorer/Scorer.tscn" id="8_o7r1y"]
+[ext_resource type="PackedScene" uid="uid://kxhi0x1vhxg4" path="res://Project/GameOver/GameOver.tscn" id="9_nhnw0"]
 
 [node name="GameScreen" type="Control"]
 layout_mode = 3
@@ -17,8 +17,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_0ipdw")
-memoryTile = ExtResource("2_dh5cc")
+script = ExtResource("1_1a8wa")
+memoryTile = ExtResource("2_0eo41")
 
 [node name="BoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
@@ -56,13 +56,13 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Moves"
-label_settings = ExtResource("1_vhhqf")
+label_settings = ExtResource("3_fdpkd")
 
 [node name="MoveCount" type="Label" parent="BoxContainer/LabelsMargin/TextContainer/MoveContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 text = "000"
-label_settings = ExtResource("1_vhhqf")
+label_settings = ExtResource("3_fdpkd")
 
 [node name="PairContainer" type="HBoxContainer" parent="BoxContainer/LabelsMargin/TextContainer"]
 layout_mode = 2
@@ -71,12 +71,12 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Pairs"
-label_settings = ExtResource("1_vhhqf")
+label_settings = ExtResource("3_fdpkd")
 
 [node name="PairCount" type="Label" parent="BoxContainer/LabelsMargin/TextContainer/PairContainer"]
 layout_mode = 2
 text = "0 / 00"
-label_settings = ExtResource("1_vhhqf")
+label_settings = ExtResource("3_fdpkd")
 
 [node name="Spacer" type="Control" parent="BoxContainer/LabelsMargin/TextContainer"]
 custom_minimum_size = Vector2(0, 27)
@@ -84,9 +84,9 @@ layout_mode = 2
 
 [node name="ExitButton" type="TextureButton" parent="BoxContainer/LabelsMargin/TextContainer"]
 layout_mode = 2
-texture_normal = ExtResource("2_trs0i")
-texture_pressed = ExtResource("3_shs8o")
-texture_hover = ExtResource("3_hvlnc")
+texture_normal = ExtResource("4_vvxhh")
+texture_pressed = ExtResource("5_yum4k")
+texture_hover = ExtResource("6_bhpl3")
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="BoxContainer/LabelsMargin/TextContainer/ExitButton"]
@@ -98,16 +98,16 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Exit
 "
-label_settings = ExtResource("5_j1lda")
+label_settings = ExtResource("7_w655d")
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Sound" type="AudioStreamPlayer" parent="."]
 volume_db = -15.0
 
-[node name="Scorer" parent="." instance=ExtResource("8_bkm7j")]
+[node name="Scorer" parent="." instance=ExtResource("8_o7r1y")]
 
-[node name="GameOver" parent="." instance=ExtResource("9_2sbw0")]
+[node name="GameOver" parent="." instance=ExtResource("9_nhnw0")]
 visible = false
 layout_mode = 1
 

@@ -1,9 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://tacfmrukqlek"]
 
-[ext_resource type="Script" path="res://Project/Scorer/Scorer.gd" id="1_v2f17"]
+[ext_resource type="Script" path="res://Project/Scorer/Scorer.gd" id="1_2pa1n"]
 
 [node name="Scorer" type="Node"]
-script = ExtResource("1_v2f17")
+script = ExtResource("1_2pa1n")
 
 [node name="Sound" type="AudioStreamPlayer" parent="."]
 volume_db = -10.0

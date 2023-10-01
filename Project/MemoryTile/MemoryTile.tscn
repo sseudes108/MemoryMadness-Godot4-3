@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://dedx5tmnjbr20"]
 
-[ext_resource type="Texture2D" uid="uid://i4x4h04mwvyg" path="res://assets/frames/hidden_frame_blank.png" id="1_54hna"]
-[ext_resource type="Script" path="res://Project/MemoryTile/MemoryTile.gd" id="2_2o3od"]
-[ext_resource type="Texture2D" uid="uid://dhnu46tsk5nwt" path="res://assets/frames/green_frame.png" id="2_t7w41"]
-[ext_resource type="Texture2D" uid="uid://bed8svubam87k" path="res://assets/glitch/banana.png" id="3_pvv7e"]
+[ext_resource type="Texture2D" uid="uid://i4x4h04mwvyg" path="res://assets/frames/hidden_frame_blank.png" id="1_xb57g"]
+[ext_resource type="Script" path="res://Project/MemoryTile/MemoryTile.gd" id="2_xye8w"]
+[ext_resource type="Texture2D" uid="uid://dhnu46tsk5nwt" path="res://assets/frames/green_frame.png" id="3_8tyym"]
+[ext_resource type="Texture2D" uid="uid://bed8svubam87k" path="res://assets/glitch/banana.png" id="4_gkpfv"]
 
 [node name="MemoryTile" type="TextureButton" groups=["Tile"]]
 anchors_preset = 8
@@ -18,8 +18,8 @@ offset_bottom = 42.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(42, 42)
-texture_normal = ExtResource("1_54hna")
-script = ExtResource("2_2o3od")
+texture_normal = ExtResource("1_xb57g")
+script = ExtResource("2_xye8w")
 
 [node name="Frame" type="TextureRect" parent="."]
 visible = false
@@ -36,7 +36,7 @@ offset_bottom = 42.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(42, 42)
-texture = ExtResource("2_t7w41")
+texture = ExtResource("3_8tyym")
 
 [node name="Image" type="TextureRect" parent="."]
 visible = false
@@ -53,6 +53,6 @@ offset_bottom = 32.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(32, 32)
-texture = ExtResource("3_pvv7e")
+texture = ExtResource("4_gkpfv")
 
 [connection signal="pressed" from="." to="." method="Pressed"]
